@@ -1,0 +1,136 @@
+:root {
+  --green-900: #12372a;
+  --green-700: #1f6b45;
+  --green-500: #2e8b57;
+  --green-100: #e0f0e6;
+  --green-50: #f1f8f3;
+  --ink: #16281f;
+  --muted: #55675d;
+  --border: #d5e4da;
+  --white: #ffffff;
+  --amber-bg: #fff6e0;
+  --amber-border: #eccb7d;
+  --amber-ink: #6e4a00;
+  --red-bg: #fdecea;
+  --red-border: #efb7b0;
+  --red-ink: #8c2318;
+}
+
+.block-container { max-width: 1120px; padding-top: 2.5rem; }
+
+/* Sidebar */
+[data-testid="stSidebar"] { background: var(--green-900); }
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] span { color: #e7f2eb; }
+.av-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 2px; }
+.av-brand-mark {
+  width: 36px; height: 36px; border-radius: 10px; flex: none;
+  background: var(--green-500); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 18px;
+}
+.av-brand-name { color: var(--white); font-size: 21px; font-weight: 700; }
+.av-brand-tag { color: #b7d3c2; font-size: 13px; margin: 0 0 8px; }
+.av-model-status {
+  border: 1px solid rgba(255, 255, 255, .22); border-radius: 10px;
+  padding: 10px 12px; font-size: 13px; color: #e7f2eb; line-height: 1.4;
+}
+.av-model-status strong { display: block; color: var(--white); margin-bottom: 2px; }
+.av-dot {
+  display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+  margin-right: 7px; background: #f2c14e;
+}
+.av-dot.ready { background: #6fdc9c; }
+
+/* Hero */
+.av-hero {
+  background: linear-gradient(120deg, var(--green-900), var(--green-700) 70%, var(--green-500));
+  color: var(--white); border-radius: 18px; padding: 44px 40px;
+}
+.av-eyebrow {
+  font-size: 13px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: #bfe3cd; margin: 0 0 10px;
+}
+.av-hero h1 {
+  color: var(--white); font-size: 42px; line-height: 1.12; font-weight: 800;
+  margin: 0 0 14px; padding: 0;
+}
+.av-hero p.av-subtitle { font-size: 18px; line-height: 1.5; max-width: 680px; margin: 0; color: #e4f3ea; }
+.av-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.av-badge {
+  padding: 5px 13px; border-radius: 999px; font-size: 13px; font-weight: 600;
+  background: rgba(255, 255, 255, .13); border: 1px solid rgba(255, 255, 255, .3); color: var(--white);
+}
+
+/* Page headings */
+.av-page-title { color: var(--green-900); font-size: 32px; font-weight: 800; margin: 0 0 4px; padding: 0; }
+.av-page-subtitle { color: var(--muted); font-size: 16px; margin: 0 0 8px; }
+
+/* Cards */
+.av-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 14px;
+  padding: 20px 22px; color: var(--ink); height: 100%; box-sizing: border-box;
+}
+.av-card h3 { color: var(--green-900); font-size: 18px; font-weight: 700; margin: 0 0 8px; padding: 0; }
+.av-card h4 { color: var(--green-700); font-size: 15px; font-weight: 700; margin: 0 0 6px; padding: 0; }
+.av-card p, .av-card li { font-size: 15px; line-height: 1.55; color: var(--ink); }
+.av-card p { margin: 0 0 8px; }
+.av-card p:last-child { margin-bottom: 0; }
+.av-card ul { margin: 0; padding-left: 18px; }
+.av-card li { margin-bottom: 4px; }
+.av-muted { color: var(--muted) !important; font-size: 14px !important; }
+
+.av-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); }
+.av-grid.wide { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.av-grid-item { background: var(--green-50); border-radius: 10px; padding: 14px 16px; }
+
+.av-stat-value { color: var(--green-700); font-size: 30px; font-weight: 800; line-height: 1.1; }
+.av-stat-label { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+.av-step-number {
+  width: 28px; height: 28px; border-radius: 50%; margin-bottom: 8px;
+  background: var(--green-100); color: var(--green-700); font-weight: 700;
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+
+/* Banners */
+.av-banner { border-radius: 10px; padding: 12px 16px; font-size: 15px; line-height: 1.5; border: 1px solid; }
+.av-banner.demo { background: var(--amber-bg); border-color: var(--amber-border); color: var(--amber-ink); }
+.av-banner.info { background: var(--green-50); border-color: var(--border); color: var(--green-900); }
+.av-banner.error { background: var(--red-bg); border-color: var(--red-border); color: var(--red-ink); }
+
+/* Analysis progress list */
+.av-progress { list-style: none; margin: 0; padding: 0 !important; }
+.av-progress li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; margin: 0; border-bottom: 1px solid var(--green-100); }
+.av-progress li:last-child { border-bottom: none; }
+.av-tag { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 10px; white-space: nowrap; align-self: center; }
+.av-tag.done { background: var(--green-100); color: var(--green-700); }
+.av-tag.pending { background: var(--amber-bg); color: var(--amber-ink); }
+
+/* Prediction */
+.av-result-crop { color: var(--muted); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.av-result-disease { color: var(--green-900); font-size: 30px; font-weight: 800; line-height: 1.2; margin: 2px 0 8px; }
+
+/* Confidence chart: thin bars, each labeled directly */
+.av-bar-row { margin-bottom: 14px; }
+.av-bar-row:last-child { margin-bottom: 0; }
+.av-bar-label { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--ink); margin-bottom: 4px; }
+.av-bar-track { height: 10px; background: var(--green-100); border-radius: 4px; }
+.av-bar-fill { height: 100%; background: var(--green-700); border-radius: 0 4px 4px 0; min-width: 2px; }
+
+/* Grad-CAM placeholder */
+.av-placeholder {
+  aspect-ratio: 1; border: 2px dashed var(--border); border-radius: 12px; background: var(--white);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 16px; color: var(--muted); font-size: 14px; box-sizing: border-box;
+}
+
+.stButton button { border-radius: 10px; font-weight: 600; }
+[data-testid="stImage"] img { border-radius: 12px; }
+
+@media (max-width: 640px) {
+  .av-hero { padding: 28px 22px; }
+  .av-hero h1 { font-size: 31px; }
+  .av-page-title { font-size: 26px; }
+}

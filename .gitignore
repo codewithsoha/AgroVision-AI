@@ -1,0 +1,20 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Datasets are large and must never be committed
+data/
+dataset/
+PlantVillage/
+plantvillage*/
+*.zip
+
+
+# Local files
+.streamlit/secrets.toml
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
